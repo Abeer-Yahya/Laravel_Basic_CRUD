@@ -16,12 +16,7 @@
 <style>
 body {
 	font-family: "Didact Gothic";
-
-min-height: 90vh;
-  background-image: url("https://images.unsplash.com/photo-1514593214839-ce1849100055?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  min-height: 90vh;
 }
 h2 {
 	font-size: 26px;
@@ -56,7 +51,6 @@ color: white;
 .AddBookLinkBtn{
 width: 100px;
 height: 100px;
-box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 display: flex;
 align-items: center;
 justify-content: center;
@@ -98,7 +92,7 @@ color: white;
 <div class=" d-flex flex-wrap w-75">
 @foreach ($books as $book)
 <div id="cardsDiv" class="card m-4" style="width: 19rem;">
-   <img src="images/{{$book['book_image']}}" class="card-img" alt="..." >
+   <img src="images/{{$book['book_image']}}" class="card-img" alt="..."  >
     <div class="card-body">
       <h4 class="card-title">{{$book['book_title']}}</h4>
      <p class="card-text">{{$book['book_auther']}}</p>

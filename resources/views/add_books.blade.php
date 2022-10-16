@@ -22,10 +22,6 @@
       height: 70vh;
       font-size: 20px;
       font-family: "Didact Gothic";
-background-image: url("https://images.unsplash.com/photo-1514593214839-ce1849100055?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80");
-background-size: cover;
-background-position: center;
-background-repeat: no-repeat;
 }
 form{
   margin-top:120px; 
@@ -49,7 +45,7 @@ form .btn{
 </head>
 <body>
     <div class="container w-25">
-    <form action="/req" method="POST" enctype="multipart/form-data">
+    <form action="/imp" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">Book title</label>
