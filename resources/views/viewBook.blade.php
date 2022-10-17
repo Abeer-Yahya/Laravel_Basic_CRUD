@@ -13,6 +13,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;600;700&display=swap" rel="stylesheet">
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 <style>
 body {
 	font-family: "Didact Gothic";
@@ -74,6 +76,12 @@ color: white;
 }
 .back{
   color: black;
+  text-decoration:none;
+
+}
+.back:hover{
+  text-decoration:none;
+  color:  #630000;
 }
 .backLink{
     
@@ -88,7 +96,7 @@ color: white;
        
       </header>
 
-    <div class="backLink"> <a href="/index" class="back"> <= BACK TO THE BOOKS</a></div> 
+      <a href="/index" class="back"><ion-icon name="caret-back-circle-outline"></ion-icon> BACK</a>
 <div class=" d-flex flex-wrap w-75">
 @foreach ($books as $book)
 <div id="cardsDiv" class="card m-4" style="width: 19rem;">

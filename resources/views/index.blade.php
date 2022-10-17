@@ -80,6 +80,15 @@ color: white;
        
       </header>
       <div class="AddBookLink"><a href="/add"><div class="AddBookLinkBtn">NEW BOOK</div></a></div>
+      <div class="searchBooh"> 	
+        <form action="/findBook" method="POST">	
+          @csrf	
+          <div class="mb-3">	
+            <input name="search" type="text" style="width:300px; margin-left:30px" placeholder="Search for a book" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">	
+            <div id="emailHelp" class="form-text"></div>	
+          </div>	
+        </form>	
+      </div>
       
 <div class=" d-flex flex-wrap w-75">
 @foreach ($books as $book)

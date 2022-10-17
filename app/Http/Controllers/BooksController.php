@@ -20,7 +20,7 @@ class BooksController extends Controller
     public function index()
     {
 
-        $books = Books::all();
+        $books = books::all();
 
         return view('index', ['books' => $books]);
     }
@@ -40,7 +40,6 @@ class BooksController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    // protected $fillable = ['book_title', 'book_description', 'book_auther'];
 
     public function store(Request $request)
     {
@@ -133,6 +132,12 @@ class BooksController extends Controller
         $book->book_image = $request->book_image;
         $book->save();
         return redirect('/index');
+    }
+
+    public function findBook(Request $request)	
+    {	
+        $book = books::where('book_title', 'like', '%' . $request->search . '%')->get();	
+        return view('viewBook', ['books' => $book]);	
     }
 
 }

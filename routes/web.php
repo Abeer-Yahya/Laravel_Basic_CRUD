@@ -28,9 +28,10 @@ Route::get('add', function () {
 
 Route::get('update/{id}', [BooksController::class, 'update'])->name('up');
 
-
 Route::get('/index', [BooksController::class, 'index']);
 
-Route::post('/imp', [BooksController::class, 'store'])->name('imp');
+
+Route::post('/add', [BooksController::class, 'store'])->name('add');
 Route::get('/delete/{id}', [BooksController::class, 'destroy'])->name('delete');
 Route::put('/put/{id}', [BooksController::class, 'updateBook'])->name('put');
+Route::post('/findBook', [BooksController::class, 'findBook'])->name('Find');	
